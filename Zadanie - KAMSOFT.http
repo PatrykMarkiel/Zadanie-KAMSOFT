@@ -1,0 +1,6 @@
+@Zadanie___KAMSOFT_HostAddress = http://localhost:5279
+
+GET {{Zadanie___KAMSOFT_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
