@@ -13,12 +13,13 @@ namespace Zadanie___KAMSOFT
         {
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddControllers();
-            builder.Services.ConfigureHttpJsonOptions(options =>
-            {
-                options.SerializerOptions.Converters.Add(
-                    new JsonStringEnumConverter()
-                );
-            });
+            builder.Services.AddControllers()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.Converters.Add(
+                        new JsonStringEnumConverter()
+                    );
+                });
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
