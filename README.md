@@ -13,7 +13,7 @@ dotnet run
 Swagger:
 
 ```text
-{localhost:}/swagger/index.html
+http://localhost:5279/swagger/index.html
 ```
 
 Endpoint:
