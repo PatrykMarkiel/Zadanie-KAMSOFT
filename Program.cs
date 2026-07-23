@@ -2,6 +2,7 @@ using System.Text;
 using System.Text.Json;
 using CsvHelper;
 using System.Globalization;
+using System.Text.Json.Serialization;
 using Zadanie___KAMSOFT.Models;
 
 namespace Zadanie___KAMSOFT
@@ -11,17 +12,18 @@ namespace Zadanie___KAMSOFT
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
-            // Add services to the container.
-
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            builder.Services.ConfigureHttpJsonOptions(options =>
+            {
+                options.SerializerOptions.Converters.Add(
+                    new JsonStringEnumConverter()
+                );
+            });
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
