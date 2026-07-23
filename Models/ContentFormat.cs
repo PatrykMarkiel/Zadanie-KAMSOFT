@@ -2,7 +2,7 @@
 {
     public class ContentFormat
     {
-        public FormatType FormatType { get; set; }
+        public type FormatType { get; set; }
         public string? Content { get; set; }
     }
 }

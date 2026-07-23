@@ -63,7 +63,7 @@ namespace Zadanie___KAMSOFT
 
                 switch (request.FormatType)
                 {
-                    case FormatType.CSV:
+                    case type.CSV:
 
                         using (StringReader reader = new(decodedContent))
                         using (CsvReader csv = new(reader, CultureInfo.InvariantCulture))
@@ -85,7 +85,7 @@ namespace Zadanie___KAMSOFT
 
                         break;
 
-                    case FormatType.INTERNAL_JSON:
+                    case type.INTERNAL_JSON:
 
                         try
                         {
