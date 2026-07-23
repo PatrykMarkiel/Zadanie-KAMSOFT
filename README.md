@@ -28,7 +28,7 @@ Pole `content` musi zawierać dane zakodowane w Base64.
 
 ```json
 {
-  "formatType": 0,
+  "formatType": "CSV",
   "content": "TmFtZSxWYWx1ZQpTd29yZCwxMDAKU2hpZWxkLDE1MApIZWxtZXQsNzUKQXJtb3IsMjUwCkJvdywxMjA="
 }
 ```
@@ -36,7 +36,7 @@ Pole `content` musi zawierać dane zakodowane w Base64.
 
 ```json
 {
-  "formatType": 1,
+  "formatType": "INTERNAL_JSON",
   "content": "WwogIHsKICAgICJOYW1lIjogIlN3b3JkIiwKICAgICJWYWx1ZSI6IDEwMAogIH0sCiAgewogICAgIk5hbWUiOiAiU2hpZWxkIiwKICAgICJWYWx1ZSI6IDE1MAogIH0sCiAgewogICAgIk5hbWUiOiAiSGVsbWV0IiwKICAgICJWYWx1ZSI6IDc1CiAgfSwKICB7CiAgICAiTmFtZSI6ICJBcm1vciIsCiAgICAiVmFsdWUiOiAyNTAKICB9LAogIHsKICAgICJOYW1lIjogIkJvdyIsCiAgICAiVmFsdWUiOiAxMjAKICB9Cl0="
 }
 ```
