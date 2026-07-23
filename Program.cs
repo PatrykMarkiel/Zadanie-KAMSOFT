@@ -37,7 +37,7 @@ namespace Zadanie___KAMSOFT
             static IResult RequestValidationConfirm(ContentFormat request)
             {
 
-                if(Enum.IsDefined(request.FormatType) == false)
+                if(Enum.IsDefined(request.type) == false)
                 {
                     return Results.BadRequest("Wrong format of content");
                 }
@@ -61,7 +61,7 @@ namespace Zadanie___KAMSOFT
 
                 List<Dictionary<string, object>> data = new();
 
-                switch (request.FormatType)
+                switch (request.type)
                 {
                     case type.CSV:
 
